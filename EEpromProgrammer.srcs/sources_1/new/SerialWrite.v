@@ -59,6 +59,8 @@ end
 
 always@( posedge sys_clk )
 begin
+    readyLine <= (state == TotalBits-1);
+    
     if( divider==ClockDivider )
     begin
         divider <= 0;
@@ -66,20 +68,20 @@ begin
         if( state<SentBits )
         begin
             state <= state + 1;
-            readyLine <= 0;
             txLine <= shiftRegister[0];
             shiftRegister[SentBits-2:0] <= shiftRegister[SentBits-1:1]; // Shift the register
         end else begin
             txLine <= 1; // Stop bit
             if( state < TotalBits-1 )
             begin
-                readyLine <= 0;
                 state <= state+1;
             end else if( state == TotalBits-1 ) begin
-                readyLine <= 1;
-                state <= TotalBits;
-            end else begin // state == TotalBits
-                readyLine <= 1;
+                if( strobe )
+                begin
+                    shiftRegister[ StartBits-1:0 ] <= 0;
+                    shiftRegister[ SentBits-1:StartBits ] <= data;
+                    state <= 0;
+                end
             end
         end
     end else begin
