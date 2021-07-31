@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="158.833835 us"></ZoomEndTime>
-      <Cursor1Time time="110.000000 us"></Cursor1Time>
+      <ZoomStartTime time="25.120000 us"></ZoomStartTime>
+      <ZoomEndTime time="55.670001 us"></ZoomEndTime>
+      <Cursor1Time time="40.470000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
       <ValueColumnWidth column_width="112"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="11" />
    <wvobject type="logic" fp_name="/serial_receive_testbench/clock">
       <obj_property name="ElementShortName">clock</obj_property>
       <obj_property name="ObjectShortName">clock</obj_property>
@@ -63,5 +63,10 @@
    <wvobject type="logic" fp_name="/serial_receive_testbench/readwriter/sender/ready">
       <obj_property name="ElementShortName">ready</obj_property>
       <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/serial_receive_testbench/readwriter/receiver/shiftRegister">
+      <obj_property name="ElementShortName">shiftRegister[9:0]</obj_property>
+      <obj_property name="ObjectShortName">shiftRegister[9:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

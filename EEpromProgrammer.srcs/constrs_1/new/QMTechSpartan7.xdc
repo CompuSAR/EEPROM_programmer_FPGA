@@ -3,6 +3,9 @@ set_property PACKAGE_PIN N10 [get_ports serial_tx]
 # Incorrect value 5v0 so we can drive the EEPROM. The CP2102 can handle it, however
 set_property IOSTANDARD LVTTL [get_ports serial_tx]
 
+set_property PACKAGE_PIN P10 [get_ports serial_rx]
+set_property IOSTANDARD LVCMOS33 [get_ports serial_rx]
+
 #set_property PACKAGE_PIN E11 [get_ports led2]
 #set_property IOSTANDARD LVCMOS33 [get_ports led2]
 #set_property PACKAGE_PIN M10 [get_ports led3]
