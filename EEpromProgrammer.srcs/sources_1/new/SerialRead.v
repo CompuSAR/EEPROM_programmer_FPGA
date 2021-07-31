@@ -62,7 +62,7 @@ begin
     breakReg = 0;
 end
 
-wire idle = (shiftRegister === IdlePattern);
+wire idle = (shiftRegister === IdlePattern) && (divider == 0);
 
 always@( posedge sys_clk )
 begin
@@ -100,10 +100,8 @@ begin
             divider <= divider + 1;
         end
     end else begin
-        divider <= 0;
-        
         if( rx==0 )
-            shiftRegister[TotalBits-1] <= rx;
+            divider = ClockDivider / 2;
     end
 end
 
