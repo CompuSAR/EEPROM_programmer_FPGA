@@ -31,13 +31,13 @@ wire [7:0]data;
 wire dataReady;
 wire breakReceived;
 
-SerialRead reader(clock, txLine, data, dataReady, dataReadyClear, breakReceived);
+//SerialRead reader(clock, txLine, data, dataReady, dataReadyClear, breakReceived);
+top_programmer readwriter( .sys_clk(clock), .serial_rx(txLine) );
 
 initial
 begin
     // Clock
     clock <= 0;
-    dataReadyClear <= 0;
     
     forever begin
         #10 clock <= 1;

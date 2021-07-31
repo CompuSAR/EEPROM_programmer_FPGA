@@ -12,38 +12,56 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="121.400001 us"></ZoomEndTime>
-      <Cursor1Time time="50.000000 us"></Cursor1Time>
+      <ZoomEndTime time="158.833835 us"></ZoomEndTime>
+      <Cursor1Time time="110.000000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+      <ValueColumnWidth column_width="112"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="10" />
    <wvobject type="logic" fp_name="/serial_receive_testbench/clock">
       <obj_property name="ElementShortName">clock</obj_property>
       <obj_property name="ObjectShortName">clock</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/serial_receive_testbench/txLine">
-      <obj_property name="ElementShortName">txLine</obj_property>
-      <obj_property name="ObjectShortName">txLine</obj_property>
-      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+   <wvobject type="logic" fp_name="/serial_receive_testbench/readwriter/serial_rx">
+      <obj_property name="ElementShortName">serial_rx</obj_property>
+      <obj_property name="ObjectShortName">serial_rx</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/serial_receive_testbench/data">
-      <obj_property name="ElementShortName">data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+   <wvobject type="logic" fp_name="/serial_receive_testbench/readwriter/serial_tx">
+      <obj_property name="ElementShortName">serial_tx</obj_property>
+      <obj_property name="ObjectShortName">serial_tx</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/serial_receive_testbench/dataReady">
       <obj_property name="ElementShortName">dataReady</obj_property>
       <obj_property name="ObjectShortName">dataReady</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/serial_receive_testbench/reader/shiftRegister">
-      <obj_property name="ElementShortName">shiftRegister[9:0]</obj_property>
-      <obj_property name="ObjectShortName">shiftRegister[9:0]</obj_property>
+   <wvobject type="array" fp_name="/serial_receive_testbench/data">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/serial_receive_testbench/reader/idle">
-      <obj_property name="ElementShortName">idle</obj_property>
-      <obj_property name="ObjectShortName">idle</obj_property>
+   <wvobject type="logic" fp_name="/serial_receive_testbench/readwriter/receiver/dataReady">
+      <obj_property name="ElementShortName">dataReady</obj_property>
+      <obj_property name="ObjectShortName">dataReady</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/serial_receive_testbench/readwriter/receiver/dataOutput">
+      <obj_property name="ElementShortName">dataOutput[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dataOutput[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/serial_receive_testbench/readwriter/sender/data">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/serial_receive_testbench/readwriter/sender/strobe">
+      <obj_property name="ElementShortName">strobe</obj_property>
+      <obj_property name="ObjectShortName">strobe</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/serial_receive_testbench/readwriter/sender/ready">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
    </wvobject>
 </wave_config>
